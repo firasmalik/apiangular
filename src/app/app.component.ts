@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
+
 
 
 @Component({
@@ -26,17 +27,11 @@ export class AppComponent {
         if(data.length) {
           this.age = data[0].age;
            this.found = true;
-
-         // var x=['results'][0];
-         // console.log(data);
-        // alert('hello')
+           }
         }
-      //  else{
-          //alert('hello');
-        //}
-      }
-    )
-  }
+      )
+    }
+    }
 
 
 
@@ -75,5 +70,13 @@ export class AppComponent {
     }
   );
 }
-/*  (data:any)=>{
+/*
+
+// var x=['results'][0];
+// console.log(data);
+// alert('hello')
+}
+//  else{
+ //alert('hello');
+//}(data:any)=>{
     console.log(JSON.stringify(data));*/
