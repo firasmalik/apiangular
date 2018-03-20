@@ -10,7 +10,7 @@ import { HttpClient} from '@angular/common/http';
 })
 export class AppComponent {
   name:string = '';
-  age:'';
+  age:'number';
   found:boolean;
 
   constructor(private httpClient:HttpClient){  }
@@ -20,13 +20,19 @@ export class AppComponent {
   }
   getProfile(){
     //console.log(this.name);
-    this.httpClient.get(`https://my-json-server.typicode.com/techsithgit/json-faker-directory/profiles/?name=${this.name}`)
-  // this.httpClient.get('https://maps.googleapis.com/maps/api/geocode/json?address=${this.name}')
+  //  this.httpClient.get(`https://my-json-server.typicode.com/techsithgit/json-faker-directory/profiles/?name=${this.name}`)
+   this.httpClient.get('https://maps.googleapis.com/maps/api/geocode/json?address=${this.name}')
     .subscribe(
       (data:any[]) => {
-        if(data.length) {
-          this.age = data[0].age;
-           this.found = true;
+
+        console.log(data);
+        this.age=data.results[0]['geometry']['location']['lat'];
+        
+
+
+
+
+            this.found = true;
            }
         }
       )
