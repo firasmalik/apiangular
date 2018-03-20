@@ -1,20 +1,11 @@
-
-<h2>GET</h2>
-Name :<input type="text" (keyup)="onNameKeyUp($event)">
-<button (click)="getProfile()">Get Profile</button>
+<div class="app">
+  <h1>Get coordinates</h1>
+<h2>Enter Location</h2>
+<input type="text" (keyup)="onNameKeyUp($event)">
+<button (click)="getProfile()">Get location</button>
 <br>
 <div *ngIf="found">
-  <span>{{name}}'s age is {{age}}</span>
+  <span>{{location}}'s  lattitude is {{digs}}</span>
+  <span>{{location}}'s  longitude is {{digsii}}</span>
 </div>
-
-
-<!--
-  <h3>ENTER LOCATION:</h3>
-  <input type="text" (keyup)="onNameKeyUp($event)" >
-
-<button (click)="getProfile()">Get Weather</button>
-<br>
-<div *ngIf="found">
-  <span>{{location}}'s wheather is{{location}}</span>
 </div>
--->
