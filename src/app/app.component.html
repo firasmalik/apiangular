@@ -1,11 +1,26 @@
+<header>
+    <h1>Get coordinates</h1>
+</header>
 <div class="app">
-  <h1>Get coordinates</h1>
-<h2>Enter Location</h2>
-<input type="text" (keyup)="onNameKeyUp($event)">
-<button (click)="getProfile()">Get location</button>
+<h2>Enter location</h2>
+<input type="text" (keyup)="onNameKeyUp($event)" >
+<button (click)="getProfile()">Get location</button >
 <br>
 <div *ngIf="found">
-  <span>{{location}}'s  lattitude is {{digs}}</span>
-  <span>{{location}}'s  longitude is {{digsii}}</span>
+
+
+  <table>
+      <span>{{location}} </span>
+    <tr>
+      <th>Lattitude</th>
+      <th>Longitude</th>
+    </tr>
+    <tr>
+     <td> <p>{{digs}} </p></td>
+     <td> <p>{{digsii}}</p></td>
+
+   </tr>
+  </table>
+
 </div>
 </div>
